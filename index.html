@@ -71,6 +71,51 @@
         .step-4 .step-num { color: #64748b; }
         .step-5 .step-num { color: #2f855a; }
         .step-6 .step-num { color: #6b46c1; }
+        /* Floating Interactive Navigation Menu */
+.color-navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.color-nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    gap: 10px;
+}
+.nav-item {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+}
+.nav-item:hover { background: #f1f5f9; }
+
+/* Dot colors for the menu items */
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-1 { background-color: #d4af37; } /* Gold */
+.dot-2 { background-color: #1a1a1a; } /* Black */
+.dot-3 { background-color: #e53e3e; } /* Red */
+.dot-4 { background-color: #cbd5e1; border: 1px solid #94a3b8; } /* White */
+.dot-5 { background-color: #38a169; } /* Green */
+.dot-6 { background-color: #805ad5; } /* Purple */
+
+/* Ensure smooth scrolling when clicking links */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
     </style>
 </head>
 <body>
@@ -78,6 +123,19 @@
     <header>
         <h1>To the Glory of God</h1>
         <p>God redeems us to reveal Him to the world.</p>
+
+            <!-- Interactive Color Menu -->
+    <nav class="color-navbar">
+        <div class="color-nav-container">
+            <a href="#step1" class="nav-item"><span class="dot dot-1"></span> 01 Plan</a>
+            <a href="#step2" class="nav-item"><span class="dot dot-2"></span> 02 Problem</a>
+            <a href="#step3" class="nav-item"><span class="dot dot-3"></span> 03 Solution</a>
+            <a href="#step4" class="nav-item"><span class="dot dot-4"></span> 04 Way</a>
+            <a href="#step5" class="nav-item"><span class="dot dot-5"></span> 05 Growth</a>
+            <a href="#step6" class="nav-item"><span class="dot dot-6"></span> 06 Reward</a>
+        </div>
+    </nav>
+
     </header>
 
     <div class="container">
@@ -87,7 +145,7 @@
         </div>
 
         <!-- Step 1 -->
-        <div class="step-card step-1">
+        <div id="step1" class="step-card step-1">
             <div class="step-num">01 / The Plan</div>
             <h3>Why did God create us?</h3>
             <p class="step-text">Gold stands for God's purpose for us. He created us without sin and in His likeness, to rule righteously over the earth on His behalf. We can choose a personal relationship with God and come to know Him as our Father.</p>
@@ -103,7 +161,7 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="step-card step-2">
+        <div id="step2" class="step-card step-2">
             <div class="step-num">02 / The Problem</div>
             <h3>Why do we need salvation?</h3>
             <p class="step-text">Man was deceived by Satan's lie. This is how evil entered mankind. There is none who does good. We live in sin and are separated from God. Because of our guilt, we face God's righteous judgment: the eternal lake of fire.</p>
@@ -127,7 +185,7 @@
         </div>
 
         <!-- Step 3 -->
-        <div class="step-card step-3">
+        <div id="step3" class="step-card step-3">
             <div class="step-num">03 / The Solution</div>
             <h3>How does God save us?</h3>
             <p class="step-text">God loves us so much that He gave His Son Jesus Christ to save us. Jesus was without sin, yet He bore our sins and died for us on the cross. This is the greatest proof of God's love.</p>
@@ -143,7 +201,7 @@
         </div>
 
         <!-- Step 4 -->
-        <div class="step-card step-4">
+        <div id="step4" class="step-card step-4">
             <div class="step-num">04 / The Way</div>
             <h3>Receive Jesus Christ!</h3>
             <p class="step-text">Jesus Christ alone can save you from sin and judgment. Believe in Him, confess Him as your Lord, and be baptized! Then you will be saved from the lake of fire and receive eternal life.</p>
@@ -163,7 +221,7 @@
         </div>
 
         <!-- Step 5 -->
-        <div class="step-card step-5">
+        <div id="step5" class="step-card step-5">
             <div class="step-num">05 / Growth</div>
             <h3>How can you experience salvation more fully?</h3>
             <p class="step-text">Jesus wants to continue saving us from malice, sin, worldly things, and everything that separates us from God. Cooperate with Him daily: feed on God's Word, be built up with others into God's house, and offer God spiritual sacrifices.</p>
@@ -179,7 +237,7 @@
         </div>
 
         <!-- Step 6 -->
-        <div class="step-card step-6">
+        <div id="step6" class="step-card step-6">
             <div class="step-num">06 / The Reward</div>
             <h3>What does Jesus have in store for you?</h3>
             <p class="step-text">If you follow Jesus and grow into full salvation, you will receive the highest reward: you will serve God as a king and priest in His coming kingdom. Jesus is coming back soon!</p>
