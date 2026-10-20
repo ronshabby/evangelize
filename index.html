@@ -6,17 +6,187 @@
     <title>Glorify God</title>
     <style>
         body {
-            font-family: system-ui, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #222;
         }
-        h1 { color: #1a365d; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #1a365d;
+            color: white;
+        }
+        header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        header p { margin: 0; font-size: 1.2rem; opacity: 0.9; }
+        
+        .intro-block {
+            text-align: center;
+            margin: 40px 0 60px 0;
+        }
+        .intro-block h2 { color: #1a365d; font-size: 2rem; margin-bottom: 10px; }
+
+        /* Step Cards Layout */
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 8px solid #ccc;
+        }
+        .step-num { font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+        .step-card h3 { font-size: 1.8rem; margin: 10px 0 20px 0; color: #111; }
+        .step-text { font-size: 1.1rem; color: #444; margin-bottom: 30px; }
+        
+        /* Verses Layout */
+        .verse-box {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            border-left: 3px solid #e2e8f0;
+        }
+        .verse-ref { font-weight: 600; color: #4a5568; font-size: 0.95rem; margin-bottom: 5px; }
+        .verse-text { font-style: italic; color: #2d3748; margin: 0; }
+
+        /* Left border colors for each step */
+        .step-1 { border-left-color: #d4af37; } /* Gold */
+        .step-2 { border-left-color: #1a1a1a; } /* Black */
+        .step-3 { border-left-color: #e53e3e; } /* Red */
+        .step-4 { border-left-color: #cbd5e1; } /* White/Silver */
+        .step-5 { border-left-color: #38a169; } /* Green */
+        .step-6 { border-left-color: #805ad5; } /* Purple */
+        
+        .step-1 .step-num { color: #b7941f; }
+        .step-2 .step-num { color: #1a1a1a; }
+        .step-3 .step-num { color: #c53030; }
+        .step-4 .step-num { color: #64748b; }
+        .step-5 .step-num { color: #2f855a; }
+        .step-6 .step-num { color: #6b46c1; }
     </style>
 </head>
 <body>
-    <h1>To the Glory of God</h1>
-    <p>God redeems us to reveal Him to the world. Our website is coming soon!</p>
-</body>
-</html>
+
+    <header>
+        <h1>To the Glory of God</h1>
+        <p>God redeems us to reveal Him to the world.</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-block">
+            <h2>The Message of Salvation</h2>
+            <p>God's full salvation for His purpose. Six steps through the message of the Bible and what it means for you.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step-card step-1">
+            <div class="step-num">01 / The Plan</div>
+            <h3>Why did God create us?</h3>
+            <p class="step-text">Gold stands for God's purpose for us. He created us without sin and in His likeness, to rule righteously over the earth on His behalf. We can choose a personal relationship with God and come to know Him as our Father.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">Genesis 1:26</div>
+                <p class="verse-text">"Then God said, 'Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth.'"</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Ephesians 1:4–5</div>
+                <p class="verse-text">"just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will,"</p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card step-2">
+            <div class="step-num">02 / The Problem</div>
+            <h3>Why do we need salvation?</h3>
+            <p class="step-text">Man was deceived by Satan's lie. This is how evil entered mankind. There is none who does good. We live in sin and are separated from God. Because of our guilt, we face God's righteous judgment: the eternal lake of fire.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">Revelation 12:9</div>
+                <p class="verse-text">"So the great dragon was cast out, that serpent of old, called the Devil and Satan, who deceives the whole world; he was cast to the earth, and his angels were cast out with him."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Romans 3:23</div>
+                <p class="verse-text">"for all have sinned and fall short of the glory of God,"</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Romans 6:23</div>
+                <p class="verse-text">"For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Revelation 20:14</div>
+                <p class="verse-text">"Then Death and Hades were cast into the lake of fire. This is the second death."</p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card step-3">
+            <div class="step-num">03 / The Solution</div>
+            <h3>How does God save us?</h3>
+            <p class="step-text">God loves us so much that He gave His Son Jesus Christ to save us. Jesus was without sin, yet He bore our sins and died for us on the cross. This is the greatest proof of God's love.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">Romans 5:8</div>
+                <p class="verse-text">"But God demonstrates His own love toward us, in that while we were still sinners, Christ died for us."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">John 3:16</div>
+                <p class="verse-text">"For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life."</p>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card step-4">
+            <div class="step-num">04 / The Way</div>
+            <h3>Receive Jesus Christ!</h3>
+            <p class="step-text">Jesus Christ alone can save you from sin and judgment. Believe in Him, confess Him as your Lord, and be baptized! Then you will be saved from the lake of fire and receive eternal life.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">John 3:16</div>
+                <p class="verse-text">"For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Mark 16:16a</div>
+                <p class="verse-text">"He who believes and is baptized will be saved; but he who does not believe will be condemned."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Romans 10:9</div>
+                <p class="verse-text">"that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved."</p>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card step-5">
+            <div class="step-num">05 / Growth</div>
+            <h3>How can you experience salvation more fully?</h3>
+            <p class="step-text">Jesus wants to continue saving us from malice, sin, worldly things, and everything that separates us from God. Cooperate with Him daily: feed on God's Word, be built up with others into God's house, and offer God spiritual sacrifices.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">1 Peter 2:1–2</div>
+                <p class="verse-text">"Therefore, laying aside all malice, all deceit, hypocrisy, envy, and all evil speaking, as newborn babes, desire the pure milk of the word, that you may grow thereby,"</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">1 Peter 2:5</div>
+                <p class="verse-text">"you also, as living stones, are being built up a spiritual house, a holy priesthood, to offer up spiritual sacrifices acceptable to God through Jesus Christ."</p>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-card step-6">
+            <div class="step-num">06 / The Reward</div>
+            <h3>What does Jesus have in store for you?</h3>
+            <p class="step-text">If you follow Jesus and grow into full salvation, you will receive the highest reward: you will serve God as a king and priest in His coming kingdom. Jesus is coming back soon!</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">Revelation 5:10</div>
+                <p class="verse-text">"And have made us kings and priests to our God; And we shall reign on the earth."</p>
+            </div>
+            <div class="verse-box">
+                <div class="verse-ref">Revelation 22:12</div>
