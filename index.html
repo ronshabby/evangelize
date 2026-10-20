@@ -16,12 +16,15 @@
         
         /* SITE HEADER & MAIN NAVIGATION BANNER */
         .site-header {
+            position: sticky;
+            top: 0;
             background-color: #0f172a;
             padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid #1e293b;
+            z-index: 2000;
         }
         .brand-container {
             display: flex;
@@ -115,11 +118,14 @@
         /* LARGE BLOCK COLOR NAVBAR STYLE */
         .color-navbar {
             position: sticky;
-            top: 0;
+            top: 60px;
             background: #0f172a;
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             padding: 15px 0;
+            /* Added smooth horizontal touch scrolling for small devices */
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
         .color-nav-container {
             max-width: 850px;
@@ -155,7 +161,7 @@
         .nav-6 { background-color: #f59e0b; color: #0f172a; }
 
         /* ARTICLE SECTION STYLING */
-        .article-section {
+        .article-section, .schedule-section, .contact-section {
             background: white;
             border-radius: 12px;
             padding: 40px;
@@ -164,26 +170,110 @@
             border-top: 6px solid #1a365d;
         }
         .article-meta { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
-        .article-section h2 { color: #1e293b; font-size: 2.2rem; margin-top: 0; line-height: 1.2; }
+        h2.section-title { color: #1e293b; font-size: 2.2rem; margin-top: 0; line-height: 1.2; }
         .article-section h3 { color: #1a365d; font-size: 1.5rem; margin-top: 30px; }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+        /* MEET SCHEDULE GRID */
+        .sched-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .sched-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .sched-day { font-weight: 700; color: #1a365d; font-size: 1.1rem; }
+        .sched-time { color: #64748b; font-size: 0.95rem; margin-bottom: 10px; }
+        .sched-name { font-weight: 600; color: #1e293b; margin: 0; }
+
+        /* CONTACT INFORMATION GRID */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .info-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #38bdf8;
+        }
+        .info-card h4 { margin: 0 0 8px 0; color: #1e293b; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        .info-card p { margin: 0; color: #4a5568; font-size: 1rem; }
+        .info-card a { color: #0284c7; text-decoration: none; font-weight: 500; }
+        
+        .social-row {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .social-btn {
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+        }
+        .social-btn:hover { opacity: 0.9; }
+
+        /* 📱 RESPONSIVE MEDIA QUERIES (Makes it fit small mobile screens) */
+        @media (max-width: 680px) {
+            .site-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .main-nav {
+                width: 100%;
+                justify-content: space-around;
+                gap: 5px;
+            }
+            .main-nav a {
+                font-size: 0.85rem;
+            }
+            .hero-section h1 { font-size: 1.9rem; }
+            .hero-section p { font-size: 1rem; }
+            .step-card, .article-section, .schedule-section, .contact-section {
+                padding: 20px;
+            }
+            .step-card h3 { font-size: 1.4rem; }
+            .step-text { font-size: 1rem; }
+            .sched-grid {
+                grid-template-columns: 1fr; /* Stacks time blocks vertically instead of columns */
+            }
+            /* Adjusts sticky navbar scroll position offset on mobile devices */
+            .color-navbar {
+                top: 95px;
+            }
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 175px; }
 
         /* Floating Back to Top Button */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             background-color: #0f172a;
             color: white;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             opacity: 0;
@@ -199,148 +289,90 @@
     <!-- Top Branding & Navigation Banner -->
     <header class="site-header">
         <div class="brand-container">
-            <!-- Simple Tree Vector Icon representing Bible study group -->
-            <svg class="brand-icon" viewBox="0 0 24 24">
-                <path d="M12 2C10.5 4 8 5.5 8 8c0 1.8 1.1 3.2 2.5 3.8L9 19h2v3h2v-3h2l-1.5-7.2c1.4-.6 2.5-2 2.5-3.8 0-2.5-2.5-4-4-6zm0 4.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5z"/>
-            </svg>
-            <span>Bible study group</span>
-        </div>
-        <nav class="main-nav">
-            <a href="#">Meet</a>
-            <a href="#gospel" class="active">Gospel</a>
-            <a href="#">Certificates</a>
-            <a href="#">Contact</a>
-            <a href="#article">Article</a>
-        </nav>
-    </header>
 
-    <div class="hero-section" id="gospel">
-        <h1>To the Glory of God</h1>
-        <p>God redeems us to reveal Him to the world.</p>
-    </div>
-
-    <!-- Color Block Menu Grid -->
-    <nav class="color-navbar">
-        <div class="color-nav-container">
-            <a href="#step1" class="nav-item nav-1"><span class="nav-num">01</span><span class="nav-label">The Plan</span></a>
-            <a href="#step2" class="nav-item nav-2"><span class="nav-num">02</span><span class="nav-label">The Problem</span></a>
-            <a href="#step3" class="nav-item nav-3"><span class="nav-num">03</span><span class="nav-label">The Solution</span></a>
-            <a href="#step4" class="nav-item nav-4"><span class="nav-num">04</span><span class="nav-label">The Way</span></a>
-            <a href="#step5" class="nav-item nav-5"><span class="nav-num">05</span><span class="nav-label">Growth</span></a>
-            <a href="#step6" class="nav-item nav-6"><span class="nav-num">06</span><span class="nav-label">The Reward</span></a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="intro-block">
-            <h2>The Message of Salvation</h2>
-            <p>God's full salvation for His purpose. Six steps through the message of the Bible and what it means for you.</p>
-        </div>
-
-        <!-- Step 1 -->
-        <div id="step1" class="step-card step-1">
-            <div class="step-num">01 / The Plan</div>
-            <h3>Why did God create us?</h3>
-            <p class="step-text">Gold stands for God's purpose for us. He created us without sin and in His likeness, to rule righteously over the earth on His behalf. We can choose a personal relationship with God and come to know Him as our Father.</p>
-            <div class="verse-box">
-                <div class="verse-ref">Genesis 1:26</div>
-                <p class="verse-text">"Then God said, 'Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth.'"</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Ephesians 1:4–5</div>
-
-
-
-                <!-- Step 4 -->
+<!-- Step 4 -->
         <div id="step4" class="step-card step-4">
             <div class="step-num">04 / The Way</div>
             <h3>Receive Jesus Christ!</h3>
-            <p class="step-text">Jesus Christ alone can save you from sin and judgment. Believe in Him, confess Him as your Lord, and be baptized! Then you will be saved from the lake of fire and receive eternal life.</p>
-            <div class="verse-box">
-                <div class="verse-ref">John 3:16</div>
-                <p class="verse-text">"For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life."</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Mark 16:16a</div>
-                <p class="verse-text">"He who believes and is baptized will be saved; but he who does not believe will be condemned."</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Romans 10:9</div>
-                <p class="verse-text">"that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved."</p>
-            </div>
+            <p class="step-text">Believe in Him, confess Him as Lord, and receive eternal life.</p>
         </div>
 
         <!-- Step 5 -->
         <div id="step5" class="step-card step-5">
             <div class="step-num">05 / Growth</div>
             <h3>How can you experience salvation more fully?</h3>
-            <p class="step-text">Jesus wants to continue saving us from malice, sin, worldly things, and everything that separates us from God. Cooperate with Him daily: feed on God's Word, be built up with others into God's house, and offer God spiritual sacrifices.</p>
-            <div class="verse-box">
-                <div class="verse-ref">1 Peter 2:1–2</div>
-                <p class="verse-text">"Therefore, laying aside all malice, all deceit, hypocrisy, envy, and all evil speaking, as newborn babes, desire the pure milk of the word, that you may grow thereby,"</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">1 Peter 2:5</div>
-                <p class="verse-text">"you also, as living stones, are being built up a spiritual house, a holy priesthood, to offer up spiritual sacrifices acceptable to God through Jesus Christ."</p>
-            </div>
+            <p class="step-text">Cooperate with Jesus daily by feeding on God's Word.</p>
         </div>
 
         <!-- Step 6 -->
         <div id="step6" class="step-card step-6">
             <div class="step-num">06 / The Reward</div>
             <h3>What does Jesus have in store for you?</h3>
-            <p class="step-text">If you follow Jesus and grow into full salvation, you will receive the highest reward: you will serve God as a king and priest in His coming kingdom. Jesus is coming back soon!</p>
-            <div class="verse-box">
-                <div class="verse-ref">Revelation 5:10</div>
-                <p class="verse-text">"And have made us kings and priests to our God; And we shall reign on the earth."</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Revelation 22:12</div>
-                <p class="verse-text">"And behold, I am coming quickly, and My reward is with Me, to give to every one according to his work."</p>
-            </div>
+            <p class="step-text">Follow Jesus to serve in His coming kingdom.</p>
         </div>
 
-        <!-- TRANSLATED STUDY ARTICLE SECTION -->
+        <!-- STUDY ARTICLE SECTION -->
         <article id="article" class="article-section">
             <div class="article-meta">Hebrews Letter | September 30, 2026</div>
-            <h2>Faith for My Need or Faith for God's Purpose?</h2>
+            <h2 class="section-title">Faith for My Need or Faith for God's Purpose?</h2>
             
-            <p>Hebrews 11 speaks about the faith of the forefathers. Abel, Enoch, Noah, Abraham, Moses, and many others obtained a good testimony through faith. God testified of them that they well-pleased Him. In Hebrews 12, they become that great "cloud of witnesses".</p>
-            
-            <p>But the faith Hebrews 11 talks about is not just initial faith. Jesus is the author and perfecter of faith. The Epistle to the Hebrews speaks not only of the beginning, but of the completion. Our faith should therefore grow and come to perfection.</p>
-
-            <h3>Faith for My Need?</h3>
-            <p>When we think of faith, we very often think first of our personal needs: "I need something, so I must believe." I worry about whether I will pass the exam, so I believe that the Lord will help me. I have a job interview or a problem and need faith for it.</p>
-            <p>This is not wrong. Of course we can and should experience the Lord in our personal lives. This faith also has its place.</p>
-            <p>But Hebrews 11 is about more than just our personal needs. It is about God wanting to fulfill His plan and purpose on this earth.</p>
-
-            <h3>Faith for God's Purpose</h3>
-            <p>Let's look at the examples in Hebrews 11.</p>
-            <p><strong>Abel</strong> did not use faith for his own cause, but for the worship of God. He knew: God wants a lamb from me. He offered this sacrifice to God and was even persecuted and killed for it.</p>
-            <p><strong>Enoch</strong> walked with God. He did God's will and experienced faith in doing so.</p>
-            <p><strong>Noah</strong> received instructions from God to build an ark. He did not yet see what was coming, but he believed God and built the ark. That was for God's plan and purpose.</p>
-            <p>This is exactly the point: very often we use faith for our personal needs, but very little for God's needs. We believe: "Lord, help me to do well. Help me pass school. Help me with my work." But what about God's purpose? What does God want to do today?</p>
-            <p>The people in Hebrews 11 cared about God's purpose. If we want to be people today who are interested in what God wants to do today, then we also need this kind of faith to implement it.</p>
-            
-            <div class="verse-box">
-                <div class="verse-ref">Hebrews 11:24-26</div>
-                <p class="verse-text">"²⁴ By faith Moses, when he became great, refused to be called the son of Pharaoh’s daughter, ²⁵ choosing rather to be mistreated with the people of God than to enjoy the passing pleasures of sin, ²⁶ esteeming the reproach of Christ greater riches than the treasures of Egypt; for he looked away to the reward."</p>
-            </div>
-
-            <h3>What Has First Priority?</h3>
-            <p>This becomes especially clear with Moses. From a human perspective, Moses had the best conditions for a career. He grew up in Pharaoh's house and had an excellent education. Perhaps he could have even become Pharaoh.</p>
-            <p>Yet Moses did not use his faith to achieve his next career step. He preferred to be mistreated with the people of God because God had called him to a service.</p>
-            <p>What has first priority in our hearts? Our career? Our education? That everything goes well for us? Of course we may pray for that. But in our awareness and in our heart, the job interview or the next exam must not be the first priority. We are here for God's kingdom. For that, we need faith.</p>
-
-            <h3>Living Faith Instead of Religion</h3>
-            <p>But how did Abel, Noah, and the others even know what God wanted? It sprang from their fellowship with the Lord. This reveals the secret: faith is a living relationship with the living God.</p>
-            <p>To believe means not only to <strong>believe in God</strong>, but also to <strong>believe God</strong>—to believe His sayings, to believe His plan, and to act accordingly. And that includes being willing to give our self into death.</p>
-            <p>Therefore let us pray: <em>Lord, what do You want to do today? What do You want to have from me? And how can I cooperate with You through faith so that Your purpose goes forward?</em></p>
+            <p>Hebrews 11 outlines the faith of forefathers, pointing toward a perfected faith in Christ that prioritizes God's eternal plan.</p>
         </article>
 
-    </div>
+        <!-- MEETING SCHEDULE (MEET) SECTION -->
+        <section id="meet" class="schedule-section">
+            <h2 class="section-title">Meeting Schedule</h2>
+            <div class="sched-grid">
+                <div class="sched-card">
+                    <div class="sched-day">Sunday</div>
+                    <div class="sched-time">10:00 AM – 12:00 PM</div>
+                    <p class="sched-name">Feast Meeting (Lord's Table)</p>
+                </div>
+                <div class="sched-card">
+                    <div class="sched-day">Wednesday</div>
+                    <div class="sched-time">7:30 PM – 9:00 PM</div>
+                    <p class="sched-name">Prayer Meeting</p>
+                </div>
+                <div class="sched-card">
+                    <div class="sched-day">Friday</div>
+                    <div class="sched-time">7:30 PM – 9:00 PM</div>
+                    <p class="sched-name">Young People's Meeting</p>
+                </div>
+                <div class="sched-card">
+                    <div class="sched-day">Saturday</div>
+                    <div class="sched-time">7:30 PM – 9:00 PM</div>
+                    <p class="sched-name">Fellowship Meeting</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Back to Top Button -->
+        <!-- CONTACT INFORMATION SECTION -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Come and See!</h2>
+            <p style="color: #4a5568; margin-top:0;">You are always welcome to connect with us or visit our meeting space.</p>
+            <div class="contact-grid">
+                <div class="info-card">
+                    <h4>📍 Address</h4>
+                    <p>1041 McNicoll Ave (Main Floor)<br>Scarborough, Ontario<br>M1W 3W6, Canada</p>
+                </div>
+                <div class="info-card">
+                    <h4>✉️ Email</h4>
+                    <p><a href="mailto:info@thechurchintoronto.org">info@thechurchintoronto.org</a></p>
+                </div>
+                <div class="info-card">
+                    <h4>📞 Phone</h4>
+                    <p><a href="tel:+16474789499">+1 (647) 478-9499</a></p>
+                </div>
+            </div>
+            
+            <div class="social-row">
+                <a href="https://thechurchintoronto.org" target="_blank" class="social-btn" style="background:#0284c7;">Official Contact Page ↗</a>
+                <a href="#" class="social-btn">WhatsApp</a>
+                <a href="#" class="social-btn">Telegram</a>
+                <a href="#" class="social-btn">YouTube</a>
+            </div>
+        </section>
+
     <a href="#" id="backToTop" class="back-to-top" title="Go to top">↑</a>
 
     <script>
