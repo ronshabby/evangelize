@@ -21,7 +21,7 @@
         header {
             text-align: center;
             padding: 60px 20px;
-            background: #1a365d;
+            background: #0f172a; /* Dark background like the reference image */
             color: white;
         }
         header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
@@ -31,7 +31,7 @@
             text-align: center;
             margin: 40px 0 60px 0;
         }
-        .intro-block h2 { color: #1a365d; font-size: 2rem; margin-bottom: 10px; }
+        .intro-block h2 { color: #0f172a; font-size: 2rem; margin-bottom: 10px; }
 
         /* Step Cards Layout */
         .step-card {
@@ -57,72 +57,81 @@
         .verse-ref { font-weight: 600; color: #4a5568; font-size: 0.95rem; margin-bottom: 5px; }
         .verse-text { font-style: italic; color: #2d3748; margin: 0; }
 
-        /* Left border colors for each step */
-        .step-1 { border-left-color: #d4af37; } /* Gold */
-        .step-2 { border-left-color: #1a1a1a; } /* Black */
-        .step-3 { border-left-color: #e53e3e; } /* Red */
-        .step-4 { border-left-color: #cbd5e1; } /* White/Silver */
-        .step-5 { border-left-color: #38a169; } /* Green */
-        .step-6 { border-left-color: #805ad5; } /* Purple */
+        /* Card border accents */
+        .step-1 { border-left-color: #f59e0b; }
+        .step-2 { border-left-color: #1e293b; }
+        .step-3 { border-left-color: #dc2626; }
+        .step-4 { border-left-color: #cbd5e1; }
+        .step-5 { border-left-color: #16a34a; }
+        .step-6 { border-left-color: #f59e0b; }
         
-        .step-1 .step-num { color: #b7941f; }
-        .step-2 .step-num { color: #1a1a1a; }
-        .step-3 .step-num { color: #c53030; }
+        .step-1 .step-num { color: #d97706; }
+        .step-2 .step-num { color: #1e293b; }
+        .step-3 .step-num { color: #dc2626; }
         .step-4 .step-num { color: #64748b; }
-        .step-5 .step-num { color: #2f855a; }
-        .step-6 .step-num { color: #6b46c1; }
+        .step-5 .step-num { color: #16a34a; }
+        .step-6 .step-num { color: #d97706; }
 
-        /* Floating Interactive Navigation Menu */
+        /* NEW LARGE BLOCK COLOR NAVBAR STYLE */
         .color-navbar {
             position: sticky;
             top: 0;
-            background: white;
+            background: #0f172a; /* Dark menu strip */
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 15px 0;
             overflow-x: auto;
-            white-space: nowrap;
         }
         .color-nav-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            padding: 0 10px;
+            display: grid;
+            grid-template-columns: repeat(6, minmax(110px, 1fr));
             gap: 10px;
+            padding: 0 20px;
         }
         .nav-item {
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 8px 12px;
-            border-radius: 20px;
-            color: #4a5568;
+            border-radius: 8px;
+            padding: 12px;
             display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s ease;
+            flex-direction: column;
+            justify-content: center;
+            height: 50px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .nav-item:hover { background: #f1f5f9; }
+        .nav-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .nav-num {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-bottom: 2px;
+            text-align: left;
+        }
+        .nav-label {
+            font-size: 0.95rem;
+            text-align: left;
+        }
 
-        /* Dot colors for the menu items */
-        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-        .dot-1 { background-color: #d4af37; } /* Gold */
-        .dot-2 { background-color: #1a1a1a; } /* Black */
-        .dot-3 { background-color: #e53e3e; } /* Red */
-        .dot-4 { background-color: #cbd5e1; border: 1px solid #94a3b8; } /* White */
-        .dot-5 { background-color: #38a169; } /* Green */
-        .dot-6 { background-color: #805ad5; } /* Purple */
+        /* Colors mapping matching your image precisely */
+        .nav-1 { background-color: #f59e0b; color: #0f172a; }
+        .nav-2 { background-color: #1e293b; color: #ffffff; }
+        .nav-3 { background-color: #dc2626; color: #ffffff; }
+        .nav-4 { background-color: #ffffff; color: #0f172a; border: 1px solid #e2e8f0; }
+        .nav-5 { background-color: #16a34a; color: #ffffff; }
+        .nav-6 { background-color: #f59e0b; color: #0f172a; }
 
-        /* Ensure smooth scrolling when clicking links */
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 
         /* Floating Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #1a365d;
+            background-color: #0f172a;
             color: white;
             width: 45px;
             height: 45px;
@@ -139,29 +148,33 @@
             z-index: 1000;
         }
         .back-to-top.show { opacity: 1; visibility: visible; }
-        .back-to-top:hover { background-color: #d4af37; transform: translateY(-3px); }
+        .back-to-top:hover { background-color: #f59e0b; transform: translateY(-3px); }
     </style>
 </head>
 <body>
     <header>
         <h1>To the Glory of God</h1>
         <p>God redeems us to reveal Him to the world.</p>
-        <nav class="color-navbar">
-            <div class="color-nav-container">
-                <a href="#step1" class="nav-item"><span class="dot dot-1"></span> 01 Plan</a>
-                <a href="#step2" class="nav-item"><span class="dot dot-2"></span> 02 Problem</a>
-                <a href="#step3" class="nav-item"><span class="dot dot-3"></span> 03 Solution</a>
-                <a href="#step4" class="nav-item"><span class="dot dot-4"></span> 04 Way</a>
-                <a href="#step5" class="nav-item"><span class="dot dot-5"></span> 05 Growth</a>
-                <a href="#step6" class="nav-item"><span class="dot dot-6"></span> 06 Reward</a>
-            </div>
-        </nav>
     </header>
+
+    <!-- Updated Large Block Menu Structure -->
+    <nav class="color-navbar">
+        <div class="color-nav-container">
+            <a href="#step1" class="nav-item nav-1"><span class="nav-num">01</span><span class="nav-label">The Plan</span></a>
+            <a href="#step2" class="nav-item nav-2"><span class="nav-num">02</span><span class="nav-label">The Problem</span></a>
+            <a href="#step3" class="nav-item nav-3"><span class="nav-num">03</span><span class="nav-label">The Solution</span></a>
+            <a href="#step4" class="nav-item nav-4"><span class="nav-num">04</span><span class="nav-label">The Way</span></a>
+            <a href="#step5" class="nav-item nav-5"><span class="nav-num">05</span><span class="nav-label">Growth</span></a>
+            <a href="#step6" class="nav-item nav-6"><span class="nav-num">06</span><span class="nav-label">The Reward</span></a>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="intro-block">
             <h2>The Message of Salvation</h2>
             <p>God's full salvation for His purpose. Six steps through the message of the Bible and what it means for you.</p>
         </div>
+
         <!-- Step 1 -->
         <div id="step1" class="step-card step-1">
             <div class="step-num">01 / The Plan</div>
@@ -176,6 +189,7 @@
                 <p class="verse-text">"just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will,"</p>
             </div>
         </div>
+
         <!-- Step 2 -->
         <div id="step2" class="step-card step-2">
             <div class="step-num">02 / The Problem</div>
@@ -198,6 +212,7 @@
                 <p class="verse-text">"Then Death and Hades were cast into the lake of fire. This is the second death."</p>
             </div>
         </div>
+
         <!-- Step 3 -->
         <div id="step3" class="step-card step-3">
             <div class="step-num">03 / The Solution</div>
@@ -207,12 +222,8 @@
                 <div class="verse-ref">Romans 5:8</div>
                 <p class="verse-text">"But God demonstrates His own love toward us, in that while we were still sinners, Christ died for us."</p>
             </div>
-            <div class="verse-box">
-                <div class="verse-ref">John 3:16</div>
-                <p class="verse-text">"For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life."</p>
-            </div>
-        </div>
-        <!-- Step 4 -->
+
+     <!-- Step 4 -->
         <div id="step4" class="step-card step-4">
             <div class="step-num">04 / The Way</div>
             <h3>Receive Jesus Christ!</h3>
@@ -230,6 +241,7 @@
                 <p class="verse-text">"that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved."</p>
             </div>
         </div>
+
         <!-- Step 5 -->
         <div id="step5" class="step-card step-5">
             <div class="step-num">05 / Growth</div>
@@ -244,6 +256,7 @@
                 <p class="verse-text">"you also, as living stones, are being built up a spiritual house, a holy priesthood, to offer up spiritual sacrifices acceptable to God through Jesus Christ."</p>
             </div>
         </div>
+
         <!-- Step 6 -->
         <div id="step6" class="step-card step-6">
             <div class="step-num">06 / The Reward</div>
@@ -258,8 +271,12 @@
                 <p class="verse-text">"And behold, I am coming quickly, and My reward is with Me, to give to every one according to his work."</p>
             </div>
         </div>
+
     </div>
+
+    <!-- Back to Top Button -->
     <a href="#" id="backToTop" class="back-to-top" title="Go to top">↑</a>
+
     <script>
         const backToTopButton = document.getElementById("backToTop");
         window.addEventListener("scroll", () => {
