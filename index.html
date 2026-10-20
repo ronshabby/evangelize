@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glorify God</title>
+    <title>Glorify God - Bible Study</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -13,19 +13,59 @@
             background-color: #fafafa;
             color: #222;
         }
+        
+        /* SITE HEADER & MAIN NAVIGATION BANNER */
+        .site-header {
+            background-color: #0f172a;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1e293b;
+        }
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #38bdf8;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .brand-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        .main-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .main-nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: #38bdf8;
+        }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        header {
+        
+        .hero-section {
             text-align: center;
             padding: 60px 20px;
-            background: #0f172a; /* Dark background like the reference image */
+            background: #0f172a;
             color: white;
         }
-        header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
-        header p { margin: 0; font-size: 1.2rem; opacity: 0.9; }
+        .hero-section h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        .hero-section p { margin: 0; font-size: 1.2rem; opacity: 0.9; }
         
         .intro-block {
             text-align: center;
@@ -57,7 +97,7 @@
         .verse-ref { font-weight: 600; color: #4a5568; font-size: 0.95rem; margin-bottom: 5px; }
         .verse-text { font-style: italic; color: #2d3748; margin: 0; }
 
-        /* Card border accents */
+        /* Left border colors */
         .step-1 { border-left-color: #f59e0b; }
         .step-2 { border-left-color: #1e293b; }
         .step-3 { border-left-color: #dc2626; }
@@ -72,15 +112,14 @@
         .step-5 .step-num { color: #16a34a; }
         .step-6 .step-num { color: #d97706; }
 
-        /* NEW LARGE BLOCK COLOR NAVBAR STYLE */
+        /* LARGE BLOCK COLOR NAVBAR STYLE */
         .color-navbar {
             position: sticky;
             top: 0;
-            background: #0f172a; /* Dark menu strip */
+            background: #0f172a;
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             padding: 15px 0;
-            overflow-x: auto;
         }
         .color-nav-container {
             max-width: 850px;
@@ -105,18 +144,9 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-        .nav-num {
-            font-size: 0.7rem;
-            opacity: 0.7;
-            margin-bottom: 2px;
-            text-align: left;
-        }
-        .nav-label {
-            font-size: 0.95rem;
-            text-align: left;
-        }
+        .nav-num { font-size: 0.7rem; opacity: 0.7; margin-bottom: 2px; text-align: left; }
+        .nav-label { font-size: 0.95rem; text-align: left; }
 
-        /* Colors mapping matching your image precisely */
         .nav-1 { background-color: #f59e0b; color: #0f172a; }
         .nav-2 { background-color: #1e293b; color: #ffffff; }
         .nav-3 { background-color: #dc2626; color: #ffffff; }
@@ -124,7 +154,20 @@
         .nav-5 { background-color: #16a34a; color: #ffffff; }
         .nav-6 { background-color: #f59e0b; color: #0f172a; }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+        /* ARTICLE SECTION STYLING */
+        .article-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 6px solid #1a365d;
+        }
+        .article-meta { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+        .article-section h2 { color: #1e293b; font-size: 2.2rem; margin-top: 0; line-height: 1.2; }
+        .article-section h3 { color: #1a365d; font-size: 1.5rem; margin-top: 30px; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 
         /* Floating Back to Top Button */
         .back-to-top {
@@ -152,12 +195,31 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>To the Glory of God</h1>
-        <p>God redeems His people to reveal God as our King and His rule to the world.</p>
+
+    <!-- Top Branding & Navigation Banner -->
+    <header class="site-header">
+        <div class="brand-container">
+            <!-- Simple Tree Vector Icon representing Bible study group -->
+            <svg class="brand-icon" viewBox="0 0 24 24">
+                <path d="M12 2C10.5 4 8 5.5 8 8c0 1.8 1.1 3.2 2.5 3.8L9 19h2v3h2v-3h2l-1.5-7.2c1.4-.6 2.5-2 2.5-3.8 0-2.5-2.5-4-4-6zm0 4.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5z"/>
+            </svg>
+            <span>Bible study group</span>
+        </div>
+        <nav class="main-nav">
+            <a href="#">Meet</a>
+            <a href="#gospel" class="active">Gospel</a>
+            <a href="#">Certificates</a>
+            <a href="#">Contact</a>
+            <a href="#article">Article</a>
+        </nav>
     </header>
 
-    <!-- Updated Large Block Menu Structure -->
+    <div class="hero-section" id="gospel">
+        <h1>To the Glory of God</h1>
+        <p>God redeems us to reveal Him to the world.</p>
+    </div>
+
+    <!-- Color Block Menu Grid -->
     <nav class="color-navbar">
         <div class="color-nav-container">
             <a href="#step1" class="nav-item nav-1"><span class="nav-num">01</span><span class="nav-label">The Plan</span></a>
@@ -186,45 +248,10 @@
             </div>
             <div class="verse-box">
                 <div class="verse-ref">Ephesians 1:4–5</div>
-                <p class="verse-text">"just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will,"</p>
-            </div>
-        </div>
 
-        <!-- Step 2 -->
-        <div id="step2" class="step-card step-2">
-            <div class="step-num">02 / The Problem</div>
-            <h3>Why do we need salvation?</h3>
-            <p class="step-text">Man was deceived by Satan's lie. This is how evil entered mankind. There is none who does good. We live in sin and are separated from God. Because of our guilt, we face God's righteous judgment: the eternal lake of fire.
-I have sinned against a Holy righteous God and only a pure blood of the Lamb can wash away my sins of the past and the ones i will continue to do cause i am a sinner. I sin because I'm a sinner: My actions reflect my corrupted nature, meaning I do not just commit sins—I am a sinner by my very default identity. I need a new life: Because spiritual death has separated me from my Creator, I am entirely incapable of fixing my own soul or earning my way back to holiness.</p>
-            <div class="verse-box">
-                <div class="verse-ref">Revelation 12:9</div>
-                <p class="verse-text">"So the great dragon was cast out, that serpent of old, called the Devil and Satan, who deceives the whole world; he was cast to the earth, and his angels were cast out with him."</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Romans 3:23</div>
-                <p class="verse-text">"for all have sinned and fall short of the glory of God,"</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Romans 6:23</div>
-                <p class="verse-text">"For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."</p>
-            </div>
-            <div class="verse-box">
-                <div class="verse-ref">Revelation 20:14</div>
-                <p class="verse-text">"Then Death and Hades were cast into the lake of fire. This is the second death."</p>
-            </div>
-        </div>
 
-        <!-- Step 3 -->
-        <div id="step3" class="step-card step-3">
-            <div class="step-num">03 / The Solution</div>
-            <h3>How does God save us?</h3>
-            <p class="step-text">God loves us so much that He gave His Son Jesus Christ to save us. Jesus was without sin, yet He bore our sins and died for us on the cross. This is the greatest proof of God's love.</p>
-            <div class="verse-box">
-                <div class="verse-ref">Romans 5:8</div>
-                <p class="verse-text">"But God demonstrates His own love toward us, in that while we were still sinners, Christ died for us."</p>
-            </div>
 
-     <!-- Step 4 -->
+                <!-- Step 4 -->
         <div id="step4" class="step-card step-4">
             <div class="step-num">04 / The Way</div>
             <h3>Receive Jesus Christ!</h3>
@@ -272,6 +299,44 @@ I have sinned against a Holy righteous God and only a pure blood of the Lamb can
                 <p class="verse-text">"And behold, I am coming quickly, and My reward is with Me, to give to every one according to his work."</p>
             </div>
         </div>
+
+        <!-- TRANSLATED STUDY ARTICLE SECTION -->
+        <article id="article" class="article-section">
+            <div class="article-meta">Hebrews Letter | September 30, 2026</div>
+            <h2>Faith for My Need or Faith for God's Purpose?</h2>
+            
+            <p>Hebrews 11 speaks about the faith of the forefathers. Abel, Enoch, Noah, Abraham, Moses, and many others obtained a good testimony through faith. God testified of them that they well-pleased Him. In Hebrews 12, they become that great "cloud of witnesses".</p>
+            
+            <p>But the faith Hebrews 11 talks about is not just initial faith. Jesus is the author and perfecter of faith. The Epistle to the Hebrews speaks not only of the beginning, but of the completion. Our faith should therefore grow and come to perfection.</p>
+
+            <h3>Faith for My Need?</h3>
+            <p>When we think of faith, we very often think first of our personal needs: "I need something, so I must believe." I worry about whether I will pass the exam, so I believe that the Lord will help me. I have a job interview or a problem and need faith for it.</p>
+            <p>This is not wrong. Of course we can and should experience the Lord in our personal lives. This faith also has its place.</p>
+            <p>But Hebrews 11 is about more than just our personal needs. It is about God wanting to fulfill His plan and purpose on this earth.</p>
+
+            <h3>Faith for God's Purpose</h3>
+            <p>Let's look at the examples in Hebrews 11.</p>
+            <p><strong>Abel</strong> did not use faith for his own cause, but for the worship of God. He knew: God wants a lamb from me. He offered this sacrifice to God and was even persecuted and killed for it.</p>
+            <p><strong>Enoch</strong> walked with God. He did God's will and experienced faith in doing so.</p>
+            <p><strong>Noah</strong> received instructions from God to build an ark. He did not yet see what was coming, but he believed God and built the ark. That was for God's plan and purpose.</p>
+            <p>This is exactly the point: very often we use faith for our personal needs, but very little for God's needs. We believe: "Lord, help me to do well. Help me pass school. Help me with my work." But what about God's purpose? What does God want to do today?</p>
+            <p>The people in Hebrews 11 cared about God's purpose. If we want to be people today who are interested in what God wants to do today, then we also need this kind of faith to implement it.</p>
+            
+            <div class="verse-box">
+                <div class="verse-ref">Hebrews 11:24-26</div>
+                <p class="verse-text">"²⁴ By faith Moses, when he became great, refused to be called the son of Pharaoh’s daughter, ²⁵ choosing rather to be mistreated with the people of God than to enjoy the passing pleasures of sin, ²⁶ esteeming the reproach of Christ greater riches than the treasures of Egypt; for he looked away to the reward."</p>
+            </div>
+
+            <h3>What Has First Priority?</h3>
+            <p>This becomes especially clear with Moses. From a human perspective, Moses had the best conditions for a career. He grew up in Pharaoh's house and had an excellent education. Perhaps he could have even become Pharaoh.</p>
+            <p>Yet Moses did not use his faith to achieve his next career step. He preferred to be mistreated with the people of God because God had called him to a service.</p>
+            <p>What has first priority in our hearts? Our career? Our education? That everything goes well for us? Of course we may pray for that. But in our awareness and in our heart, the job interview or the next exam must not be the first priority. We are here for God's kingdom. For that, we need faith.</p>
+
+            <h3>Living Faith Instead of Religion</h3>
+            <p>But how did Abel, Noah, and the others even know what God wanted? It sprang from their fellowship with the Lord. This reveals the secret: faith is a living relationship with the living God.</p>
+            <p>To believe means not only to <strong>believe in God</strong>, but also to <strong>believe God</strong>—to believe His sayings, to believe His plan, and to act accordingly. And that includes being willing to give our self into death.</p>
+            <p>Therefore let us pray: <em>Lord, what do You want to do today? What do You want to have from me? And how can I cooperate with You through faith so that Your purpose goes forward?</em></p>
+        </article>
 
     </div>
 
