@@ -171,26 +171,10 @@
         .article-full h3 { font-size: 1.3rem; margin: 32px 0 8px; color: var(--heading); }
         .article-full p { color: var(--step-text); font-size: 1.05rem; }
         .article-source { margin-top: 32px; font-size: 0.9rem; color: var(--muted); }
-
-        /* ---------- NEW: index of all articles from The Church in Toronto ---------- */
-        .more-articles { margin-top: 56px; }
-        .more-articles h3 { font-size: 1.5rem; margin: 0 0 6px; color: var(--heading); }
-        .article-filter {
-            width: 100%; box-sizing: border-box; margin: 14px 0 18px;
-            padding: 12px 14px; font: inherit; color: var(--text);
-            background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-        }
-        .article-filter:focus-visible { outline: 2px solid var(--nav-accent); outline-offset: 2px; }
-        .article-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
-        .article-index li { border-bottom: 1px solid var(--border); }
-        .article-index a {
-            display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-            padding: 14px 4px; color: var(--heading); text-decoration: none; font-weight: 600;
-        }
-        .article-index a:hover { color: var(--nav-accent); }
-        .article-index time { flex: none; font-size: 0.85rem; font-weight: 400; color: var(--muted); }
-        .article-empty { color: var(--muted); margin: 16px 0 0; }
-        @media (max-width: 520px) { .article-index a { flex-direction: column; gap: 2px; } }
+        .article-full sup { font-size: 0.7em; color: var(--nav-accent); font-weight: 700; margin-left: 1px; }
+        .article-full + .article-full { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border); }
+        .refs { margin: 6px 0 0; padding-left: 26px; color: var(--verse-text); font-size: 0.95rem; }
+        .refs li { margin: 2px 0; }
 
         /* ---------- NEW: Meeting schedule + contact ---------- */
         .meet-grid, .contact-grid {
@@ -280,9 +264,17 @@
     <!-- ================= ARTICLES ================= -->
     <main class="container" id="articles">
         <h1 class="section-title">Articles</h1>
-        <p class="section-intro">Short Bible studies on the book of Hebrews and more. Looking for more? <a href="#church-articles" style="color: var(--nav-accent); font-weight: 600;">Browse all articles from The Church in Toronto</a>.</p>
+        <p class="section-intro">Short Bible studies on the book of Hebrews and more.</p>
 
         <ul class="article-list">
+            <li class="article-item">
+                <p class="meta">Gospel | October 20, 2026</p>
+                <h3><a href="#article-gospel-kingdom">Gospel of the Kingdom</a></h3>
+                <p>What does “good news” really mean? From Isaiah’s running messenger to Jesus, the upside-down King, a conversation about the gospel as the announcement that God reigns.</p>
+                <div class="article-links">
+                    <a href="#article-gospel-kingdom">Read here</a>
+                </div>
+            </li>
             <li class="article-item">
                 <p class="meta">Hebrews Letter | September 30, 2026</p>
                 <h3><a href="#article-hebrews-11">Faith for My Need or Faith for God's Purpose?</a></h3>
@@ -295,6 +287,95 @@
             </li>
             <!-- To add another article, copy the <li> block above -->
         </ul>
+
+        <article class="article-full" id="article-gospel-kingdom">
+            <p class="meta">Gospel | October 20, 2026</p>
+            <h2>Gospel of the Kingdom</h2>
+
+            <h3>The Messenger of Good News in Isaiah</h3>
+            <p><strong>Jon:</strong> There’s this beautiful poem it’s in the book of Isaiah.<sup>1</sup></p>
+            <p><strong>Tim:</strong> The city of Jerusalem has just been destroyed by Babylon, a great kingdom in the north.<sup>2</sup> And all these Jewish people, they’ve been sent away into exile.<sup>3</sup> But a few remained in the city<sup>4</sup>, and they’re left wondering what happened? Has our God abandoned us?</p>
+            <p><strong>Jon:</strong> Right, because Jerusalem was supposed to be the city where God would reign over the world to bring peace and blessing to everyone.<sup>5</sup></p>
+            <p><strong>Tim:</strong> Now Isaiah had been saying that Jerusalem’s destruction was a mess of Israel’s own making. They had turned away from their God, become corrupt, and so their city and their temple were destroyed.<sup>6</sup></p>
+            <p><strong>Jon:</strong> Yeah. Everything seems lost.</p>
+            <p><strong>Tim:</strong> But the poem goes on. There is a watchman on the city walls. And far out on the hills we see a messenger, and he’s running towards the city. He’s running and he’s shouting, “Good news!” And Isaiah says, “How beautiful on the mountains are the feet of those who bring good news.”<sup>7</sup></p>
+            <p><strong>Jon:</strong> Beautiful feet?</p>
+            <p><strong>Tim:</strong> Yes! The feet are beautiful because they’re carrying a beautiful message.</p>
+            <p><strong>Jon:</strong> What’s the message?</p>
+            <p><strong>Tim:</strong> That despite Jerusalem’s destruction, Israel’s God still reigns as king,<sup>8</sup> and that God himself is going to one day return to this city, take up his throne, and bring peace.<sup>9</sup></p>
+            <p><strong>Jon:</strong> And the watchmen sing for joy because of the good news that their God still reigns.<sup>10</sup></p>
+            <div class="verse-box">
+                <div class="verse-ref">Scripture references</div>
+                <ol class="refs" start="1">
+                    <li>Isaiah 52</li>
+                    <li>Jeremiah 52:12-23</li>
+                    <li>Jeremiah 52:24-30</li>
+                    <li>Jeremiah 52:31-34</li>
+                    <li>Psalm 132:13-18</li>
+                    <li>Isaiah 30:9-14; 52:1-6</li>
+                    <li>Isaiah 52:7-8</li>
+                    <li>Isaiah 52:7</li>
+                    <li>Isaiah 52:8-15</li>
+                    <li>Isaiah 52:10</li>
+                </ol>
+            </div>
+
+            <h3>New Testament: Good News of a New King</h3>
+            <p><strong>Tim:</strong> Now, in the New Testament, we find this same phrase “the good news.”<sup>11</sup> It is the Greek word <em>euangelion</em>, and it’s also sometimes translated with the word “gospel.”<sup>12</sup></p>
+            <p><strong>Jon:</strong> So when Christians say, “Do you believe the Gospel?”, they mean, “Do you believe the news?”</p>
+            <p><strong>Tim:</strong> But not just any news. In the Bible, this phrase is always about the announcement of the reign of a new king.<sup>13</sup> And in the New Testament, the Gospels use this phrase to summarize all of Jesus’ teachings. They say he went about “proclaiming the good news of God’s Kingdom.”<sup>14</sup></p>
+            <p><strong>Jon:</strong> So Jesus saw himself as the messenger bringing the news that God reigns.<sup>15</sup></p>
+            <p><strong>Tim:</strong> Yes, but the way that he described God’s reign, it surprised everybody. I mean, think. A powerful, successful kingdom, it needs to be strong, able to impose its will, able to defeat its enemies. But Jesus said the greatest person in God’s Kingdom was the weakest, the one who loves and who serves the poor.<sup>16</sup> And he said you live under God’s reign when you respond to evil by loving your enemies, and forgiving them, and seeking peace.<sup>17</sup> This is an upside-down Kingdom.</p>
+            <p><strong>Jon:</strong> Now, Jesus also said that this Kingdom was arriving with him.<sup>18</sup></p>
+            <p><strong>Tim:</strong> Yeah. So for example, there’s a really interesting story where there is a high ranking Roman officer, and he comes to Jesus begging him to heal his servant. And he even calls Jesus his “Lord,” acknowledging that Jesus is his authority.<sup>19</sup> Jesus praises this man for recognizing what no one else yet had: that not only was Jesus announcing God’s Kingdom, he was the king.<sup>20</sup></p>
+            <p><strong>Jon:</strong> And so the word gets out that this Jewish man from Galilee is talking and acting like he’s the king of Israel<sup>21</sup>: He’s appointing twelve disciples, which are an image of Israel’s twelve tribes, he’s healing people, forgiving people their sins.<sup>22</sup></p>
+            <p><strong>Tim:</strong> And all of this so threatened Israel’s leaders that they finally decide to have him killed, and Jesus let them.<sup>23</sup></p>
+            <div class="verse-box">
+                <div class="verse-ref">Scripture references</div>
+                <ol class="refs" start="11">
+                    <li>Luke 2:10; Matthew 11:5</li>
+                    <li>Matthew 24:14; Mark 1:1</li>
+                    <li>Isaiah 52:7</li>
+                    <li>Matthew 4:23; Luke 4:43</li>
+                    <li>Luke 4:18,43</li>
+                    <li>Matthew 23:11-12</li>
+                    <li>Matthew 5</li>
+                    <li>Matthew 4:17</li>
+                    <li>Matthew 8:5-9</li>
+                    <li>Matthew 8:10-13</li>
+                    <li>Mark 1:27-28</li>
+                    <li>Matthew 10:1-4</li>
+                    <li>Matthew 26:1-3</li>
+                </ol>
+            </div>
+
+            <h3>A Different Kind of King and Kingdom</h3>
+            <p><strong>Jon:</strong> Yeah, which is a weird thing to do if you’re trying to become king.</p>
+            <p><strong>Tim:</strong> That’s right, but for Jesus, this is what had to happen. Jesus saw the sin and devastation of his people Israel as just one small part of the entire human condition, how all humanity has rebelled against God, resulting in the tragedy and devastation of our whole world.<sup>24</sup> So how is God going to bring his reign over such a world? Jesus believed it would be through an act of sacrificial love for his enemies.<sup>25</sup> This is why in the Gospels, Jesus’ crucifixion is depicted as his enthronement as the King of the Jews.<sup>26</sup></p>
+            <p><strong>Jon:</strong> Yeah. He receives a crown; he also receives a robe.</p>
+            <p><strong>Tim:</strong> He’s exalted up, not onto a throne but onto the cross.<sup>27</sup></p>
+            <p><strong>Jon:</strong> How beautiful are the feet that bring good news.<sup>28</sup></p>
+            <p><strong>Tim:</strong> And the good news now is that Jesus has defeated death and that he reigns as King, that he has dealt with our sin and corruption himself, and that he’s conquered it with his life and with his love.<sup>29</sup></p>
+            <p><strong>Jon:</strong> And then Jesus sent his followers to go out and keep announcing the good news of this upside-down Kingdom...<sup>30</sup></p>
+            <p><strong>Tim:</strong> And to invite everyone to give their allegiance to him, the King who defeated death with his love.<sup>31</sup></p>
+            <div class="verse-box">
+                <div class="verse-ref">Scripture references</div>
+                <ol class="refs" start="24">
+                    <li>Matthew 23</li>
+                    <li>John 19:1-16; Romans 5:6-8</li>
+                    <li>Mark 15:16-20</li>
+                    <li>Mark 15:26-32</li>
+                    <li>Isaiah 52:7; Romans 10:15</li>
+                    <li>Colossians 2:9-15, Romans 7:24-25; 8:1-2</li>
+                    <li>Acts 1:8; 2:22-41; 17:1-9</li>
+                    <li>John 3:16-17</li>
+                </ol>
+            </div>
+
+            <p class="article-source">
+                Source: script of the BibleProject video “Gospel of the Kingdom” (Tim and Jon).
+            </p>
+        </article>
 
         <article class="article-full" id="article-hebrews-11">
             <p class="meta">Hebrews Letter | September 30, 2026</p>
@@ -332,39 +413,6 @@
                 Source: <a href="https://bibeltreff.info/artikel/hebraer-brief/hebraer-11-glaube-fuer-gottes-vorsatz.html" target="_blank" rel="noopener">Bibeltreff Stuttgart</a> (translated from German).
             </p>
         </article>
-
-        <!-- All articles from https://thechurchintoronto.org/articles/ (each opens the original page) -->
-        <div class="more-articles" id="church-articles">
-            <h3>More articles from The Church in Toronto</h3>
-            <p class="section-intro" style="margin-bottom: 0;">Each title opens the full article on <a href="https://thechurchintoronto.org/articles/" target="_blank" rel="noopener" style="color: var(--nav-accent); font-weight: 600;">thechurchintoronto.org</a>.</p>
-
-            <input class="article-filter" id="article-filter" type="search" placeholder="Search articles" aria-label="Search articles">
-
-            <ul class="article-index" id="article-index">
-                <li><a href="https://thechurchintoronto.org/jesus-christ-is-god/" target="_blank" rel="noopener"><span>Jesus Christ is God</span><time datetime="2025-04-24">April 24, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-easter/" target="_blank" rel="noopener"><span>Should Christians Celebrate Easter?</span><time datetime="2025-04-19">April 19, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/will-you-be-here-when-the-earth-is-judged-by-god/" target="_blank" rel="noopener"><span>Will you be here when the earth is judged by God?</span><time datetime="2025-04-12">April 12, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/jesus-is-returning-soon-now-what/" target="_blank" rel="noopener"><span>Jesus is returning soon! Now what??</span><time datetime="2024-05-03">May 3, 2024</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-church-what-it-is-and-what-is-it-not/" target="_blank" rel="noopener"><span>The Church: What it is and what is it not.</span><time datetime="2022-11-22">November 22, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/salvation-more-than-you-realize/" target="_blank" rel="noopener"><span>Salvation: More Than You Realize!</span><time datetime="2022-08-01">August 1, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/gods-plan-his-kingdom-on-earth-represented-by-the-church/" target="_blank" rel="noopener"><span>God’s Plan – Establishing His Kingdom on Earth through the Church</span><time datetime="2022-04-30">April 30, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-covid-19-vaccines-and-the-antichrist/" target="_blank" rel="noopener"><span>The COVID-19 Vaccines and the Antichrist</span><time datetime="2021-10-05">October 5, 2021</time></a></li>
-                <li><a href="https://thechurchintoronto.org/are-christians-safe-from-gods-wrath/" target="_blank" rel="noopener"><span>Are Christians Safe from God’s Wrath?</span><time datetime="2021-06-11">June 11, 2021</time></a></li>
-                <li><a href="https://thechurchintoronto.org/is-the-old-testament-still-relevant/" target="_blank" rel="noopener"><span>Is the Old Testament Still Relevant?</span><time datetime="2020-12-12">December 12, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-honor-mary/" target="_blank" rel="noopener"><span>Should Christians Honor Mary?</span><time datetime="2020-08-20">August 20, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/israel-signs-peace-deal-with-uae-why-this-matters/" target="_blank" rel="noopener"><span>Israel signs peace deal with UAE – Why this matters!</span><time datetime="2020-08-16">August 16, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/a-righteous-god-who-hates-lawlessness/" target="_blank" rel="noopener"><span>A Righteous God Who Hates Lawlessness</span><time datetime="2020-06-18">June 18, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/can-i-understand-the-bible/" target="_blank" rel="noopener"><span>Can I understand the Bible?</span><time datetime="2020-06-15">June 15, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/can-we-lose-our-salvation/" target="_blank" rel="noopener"><span>Can we lose our salvation?</span><time datetime="2020-04-19">April 19, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-christmas/" target="_blank" rel="noopener"><span>Should Christians Celebrate Christmas?</span><time datetime="2019-12-17">December 17, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-halloween/" target="_blank" rel="noopener"><span>Should Christians Celebrate Halloween?</span><time datetime="2019-10-30">October 30, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-meaning-and-spiritual-reality-of-baptism/" target="_blank" rel="noopener"><span>The Meaning and Spiritual Reality of Baptism</span><time datetime="2019-09-26">September 26, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/do-christians-really-go-to-heaven/" target="_blank" rel="noopener"><span>Do Christians really go to Heaven for Eternity?</span><time datetime="2019-06-18">June 18, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/enter-by-the-narrow-gate/" target="_blank" rel="noopener"><span>Enter by the narrow gate</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/who-is-jesus-christ/" target="_blank" rel="noopener"><span>Who is Jesus Christ?</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
-            </ul>
-            <p class="article-empty" id="article-empty" hidden>No articles match your search.</p>
-        </div>
     </main>
 
 
@@ -394,23 +442,6 @@
             root.setAttribute("data-theme", next);
             try { localStorage.setItem("theme", next); } catch (e) {}
         });
-
-        // Search box for the article list
-        (function () {
-            const box = document.getElementById("article-filter");
-            const items = document.querySelectorAll("#article-index li");
-            const empty = document.getElementById("article-empty");
-            box.addEventListener("input", () => {
-                const q = box.value.trim().toLowerCase();
-                let shown = 0;
-                items.forEach(li => {
-                    const match = li.textContent.toLowerCase().includes(q);
-                    li.hidden = !match;
-                    if (match) shown++;
-                });
-                empty.hidden = shown > 0;
-            });
-        })();
     </script>
 </body>
 </html>
