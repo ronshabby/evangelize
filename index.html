@@ -274,6 +274,26 @@
         .article-full p { color: var(--step-text); font-size: 1.05rem; }
         .article-source { margin-top: 32px; font-size: 0.9rem; color: var(--muted); }
 
+        /* ---------- NEW: index of all articles from The Church in Toronto ---------- */
+        .more-articles { margin-top: 56px; }
+        .more-articles h3 { font-size: 1.5rem; margin: 0 0 6px; color: var(--heading); }
+        .article-filter {
+            width: 100%; box-sizing: border-box; margin: 14px 0 18px;
+            padding: 12px 14px; font: inherit; color: var(--text);
+            background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+        }
+        .article-filter:focus-visible { outline: 2px solid var(--nav-accent); outline-offset: 2px; }
+        .article-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+        .article-index li { border-bottom: 1px solid var(--border); }
+        .article-index a {
+            display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+            padding: 14px 4px; color: var(--heading); text-decoration: none; font-weight: 600;
+        }
+        .article-index a:hover { color: var(--nav-accent); }
+        .article-index time { flex: none; font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+        .article-empty { color: var(--muted); margin: 16px 0 0; }
+        @media (max-width: 520px) { .article-index a { flex-direction: column; gap: 2px; } }
+
         /* ---------- NEW: Meeting schedule + contact ---------- */
         .meet-grid, .contact-grid {
             display: grid; gap: 16px;
@@ -541,6 +561,39 @@
                 Source: <a href="https://bibeltreff.info/artikel/hebraer-brief/hebraer-11-glaube-fuer-gottes-vorsatz.html" target="_blank" rel="noopener">Bibeltreff Stuttgart</a> (translated from German).
             </p>
         </article>
+
+        <!-- All articles from https://thechurchintoronto.org/articles/ (each opens the original page) -->
+        <div class="more-articles" id="church-articles">
+            <h3>More articles from The Church in Toronto</h3>
+            <p class="section-intro" style="margin-bottom: 0;">Each title opens the full article on <a href="https://thechurchintoronto.org/articles/" target="_blank" rel="noopener" style="color: var(--nav-accent); font-weight: 600;">thechurchintoronto.org</a>.</p>
+
+            <input class="article-filter" id="article-filter" type="search" placeholder="Search articles" aria-label="Search articles">
+
+            <ul class="article-index" id="article-index">
+                <li><a href="https://thechurchintoronto.org/jesus-christ-is-god/" target="_blank" rel="noopener"><span>Jesus Christ is God</span><time datetime="2025-04-24">April 24, 2025</time></a></li>
+                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-easter/" target="_blank" rel="noopener"><span>Should Christians Celebrate Easter?</span><time datetime="2025-04-19">April 19, 2025</time></a></li>
+                <li><a href="https://thechurchintoronto.org/will-you-be-here-when-the-earth-is-judged-by-god/" target="_blank" rel="noopener"><span>Will you be here when the earth is judged by God?</span><time datetime="2025-04-12">April 12, 2025</time></a></li>
+                <li><a href="https://thechurchintoronto.org/jesus-is-returning-soon-now-what/" target="_blank" rel="noopener"><span>Jesus is returning soon! Now what??</span><time datetime="2024-05-03">May 3, 2024</time></a></li>
+                <li><a href="https://thechurchintoronto.org/the-church-what-it-is-and-what-is-it-not/" target="_blank" rel="noopener"><span>The Church: What it is and what is it not.</span><time datetime="2022-11-22">November 22, 2022</time></a></li>
+                <li><a href="https://thechurchintoronto.org/salvation-more-than-you-realize/" target="_blank" rel="noopener"><span>Salvation: More Than You Realize!</span><time datetime="2022-08-01">August 1, 2022</time></a></li>
+                <li><a href="https://thechurchintoronto.org/gods-plan-his-kingdom-on-earth-represented-by-the-church/" target="_blank" rel="noopener"><span>God’s Plan – Establishing His Kingdom on Earth through the Church</span><time datetime="2022-04-30">April 30, 2022</time></a></li>
+                <li><a href="https://thechurchintoronto.org/the-covid-19-vaccines-and-the-antichrist/" target="_blank" rel="noopener"><span>The COVID-19 Vaccines and the Antichrist</span><time datetime="2021-10-05">October 5, 2021</time></a></li>
+                <li><a href="https://thechurchintoronto.org/are-christians-safe-from-gods-wrath/" target="_blank" rel="noopener"><span>Are Christians Safe from God’s Wrath?</span><time datetime="2021-06-11">June 11, 2021</time></a></li>
+                <li><a href="https://thechurchintoronto.org/is-the-old-testament-still-relevant/" target="_blank" rel="noopener"><span>Is the Old Testament Still Relevant?</span><time datetime="2020-12-12">December 12, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/should-christians-honor-mary/" target="_blank" rel="noopener"><span>Should Christians Honor Mary?</span><time datetime="2020-08-20">August 20, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/israel-signs-peace-deal-with-uae-why-this-matters/" target="_blank" rel="noopener"><span>Israel signs peace deal with UAE – Why this matters!</span><time datetime="2020-08-16">August 16, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/a-righteous-god-who-hates-lawlessness/" target="_blank" rel="noopener"><span>A Righteous God Who Hates Lawlessness</span><time datetime="2020-06-18">June 18, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/can-i-understand-the-bible/" target="_blank" rel="noopener"><span>Can I understand the Bible?</span><time datetime="2020-06-15">June 15, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/can-we-lose-our-salvation/" target="_blank" rel="noopener"><span>Can we lose our salvation?</span><time datetime="2020-04-19">April 19, 2020</time></a></li>
+                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-christmas/" target="_blank" rel="noopener"><span>Should Christians Celebrate Christmas?</span><time datetime="2019-12-17">December 17, 2019</time></a></li>
+                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-halloween/" target="_blank" rel="noopener"><span>Should Christians Celebrate Halloween?</span><time datetime="2019-10-30">October 30, 2019</time></a></li>
+                <li><a href="https://thechurchintoronto.org/the-meaning-and-spiritual-reality-of-baptism/" target="_blank" rel="noopener"><span>The Meaning and Spiritual Reality of Baptism</span><time datetime="2019-09-26">September 26, 2019</time></a></li>
+                <li><a href="https://thechurchintoronto.org/do-christians-really-go-to-heaven/" target="_blank" rel="noopener"><span>Do Christians really go to Heaven for Eternity?</span><time datetime="2019-06-18">June 18, 2019</time></a></li>
+                <li><a href="https://thechurchintoronto.org/enter-by-the-narrow-gate/" target="_blank" rel="noopener"><span>Enter by the narrow gate</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
+                <li><a href="https://thechurchintoronto.org/who-is-jesus-christ/" target="_blank" rel="noopener"><span>Who is Jesus Christ?</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
+            </ul>
+            <p class="article-empty" id="article-empty" hidden>No articles match your search.</p>
+        </div>
     </section>
 
     <!-- ================= MEETING SCHEDULE ================= -->
@@ -598,9 +651,9 @@
 
         <div class="contact-links">
             <a href="https://thechurchintoronto.org" target="_blank" rel="noopener">Official Contact Page &#8599;</a>
-            <a href="#">WhatsApp</a>
-            <a href="#">Telegram</a>
-            <a href="#">YouTube</a>
+            <a href="https://wa.me/16474789499" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://t.me/thechurchintoronto" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://youtube.com/c/thechurchintoronto" target="_blank" rel="noopener">YouTube</a>
         </div>
     </section>
 
@@ -625,6 +678,23 @@
             root.setAttribute("data-theme", next);
             try { localStorage.setItem("theme", next); } catch (e) {}
         });
+
+        // Search box for the article list
+        (function () {
+            const box = document.getElementById("article-filter");
+            const items = document.querySelectorAll("#article-index li");
+            const empty = document.getElementById("article-empty");
+            box.addEventListener("input", () => {
+                const q = box.value.trim().toLowerCase();
+                let shown = 0;
+                items.forEach(li => {
+                    const match = li.textContent.toLowerCase().includes(q);
+                    li.hidden = !match;
+                    if (match) shown++;
+                });
+                empty.hidden = shown > 0;
+            });
+        })();
 
         // Highlight the top-menu link for the section you are viewing
         (function () {
