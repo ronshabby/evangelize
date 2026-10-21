@@ -269,30 +269,11 @@
         .article-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.9rem; }
         .article-links a, .contact-grid a { color: var(--nav-accent); font-weight: 600; }
 
-        .article-full h2 { font-size: 1.9rem; margin: 0 0 18px; color: var(--heading); }
-        .article-full h3 { font-size: 1.3rem; margin: 32px 0 8px; color: var(--heading); }
-        .article-full p { color: var(--step-text); font-size: 1.05rem; }
-        .article-source { margin-top: 32px; font-size: 0.9rem; color: var(--muted); }
-
-        /* ---------- NEW: index of all articles from The Church in Toronto ---------- */
-        .more-articles { margin-top: 56px; }
-        .more-articles h3 { font-size: 1.5rem; margin: 0 0 6px; color: var(--heading); }
-        .article-filter {
-            width: 100%; box-sizing: border-box; margin: 14px 0 18px;
-            padding: 12px 14px; font: inherit; color: var(--text);
-            background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+        .all-articles-link {
+            display: inline-block; padding: 12px 20px; border-radius: 10px;
+            background: var(--nav-accent); color: #0b1220; font-weight: 700; text-decoration: none;
         }
-        .article-filter:focus-visible { outline: 2px solid var(--nav-accent); outline-offset: 2px; }
-        .article-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
-        .article-index li { border-bottom: 1px solid var(--border); }
-        .article-index a {
-            display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-            padding: 14px 4px; color: var(--heading); text-decoration: none; font-weight: 600;
-        }
-        .article-index a:hover { color: var(--nav-accent); }
-        .article-index time { flex: none; font-size: 0.85rem; font-weight: 400; color: var(--muted); }
-        .article-empty { color: var(--muted); margin: 16px 0 0; }
-        @media (max-width: 520px) { .article-index a { flex-direction: column; gap: 2px; } }
+        .all-articles-link:hover { filter: brightness(1.1); }
 
         /* ---------- NEW: Meeting schedule + contact ---------- */
         .meet-grid, .contact-grid {
@@ -359,7 +340,7 @@
                 <a href="#gospel">Gospel</a>
                 <a href="#certificates">Certificates</a>
                 <a href="#contact">Contact</a>
-                <a href="#articles">Article</a>
+                <a href="articles.html">Article</a>
             </nav>
 
             <div class="site-tools">
@@ -506,94 +487,24 @@
         </div>
     </div>
 
-    <!-- ================= ARTICLES ================= -->
+    <!-- ================= ARTICLES (short preview; full list is on articles.html) ================= -->
     <section class="container" id="articles">
         <h2 class="section-title">Articles</h2>
         <p class="section-intro">Short Bible studies on the book of Hebrews and more.</p>
 
-        <ul class="article-list">
+        <ul class="article-list" style="margin-bottom: 28px;">
             <li class="article-item">
                 <p class="meta">Hebrews Letter | September 30, 2026</p>
-                <h3><a href="#article-hebrews-11">Faith for My Need or Faith for God's Purpose?</a></h3>
+                <h3><a href="articles.html#article-hebrews-11">Faith for My Need or Faith for God's Purpose?</a></h3>
                 <p>Hebrews 11 is about more than our personal needs. It shows people who used their faith for what God wanted to do on earth.</p>
                 <div class="article-links">
-                    <a href="#article-hebrews-11">Read here</a>
+                    <a href="articles.html#article-hebrews-11">Read the article</a>
                     <a href="https://bibeltreff.info/artikel/hebraer-brief/hebraer-11-glaube-fuer-gottes-vorsatz.html" target="_blank" rel="noopener">Original (German) &#8599;</a>
-                    <a href="https://bibeltreff.info/articles/" target="_blank" rel="noopener">More articles &#8599;</a>
                 </div>
             </li>
-            <!-- To add another article, copy the <li> block above -->
         </ul>
 
-        <article class="article-full" id="article-hebrews-11">
-            <p class="meta">Hebrews Letter | September 30, 2026</p>
-            <h2>Faith for My Need or Faith for God's Purpose?</h2>
-
-            <p>Hebrews 11 speaks about the faith of the forefathers. Abel, Enoch, Noah, Abraham, Moses, and many others obtained a good testimony through faith. God testified of them that they well-pleased Him. In Hebrews 12, they become that great "cloud of witnesses".</p>
-            <p>But the faith Hebrews 11 talks about is not just initial faith. Jesus is the author and perfecter of faith. Our faith should therefore grow and come to perfection.</p>
-
-            <h3>Faith for My Need?</h3>
-            <p>When we think of faith, we very often think first of our personal needs: "I need something, so I must believe." I worry about whether I will pass the exam, so I believe that the Lord will help me. I have a job interview or a problem and need faith for it. This is not wrong. Of course we can and should experience the Lord in our personal lives.</p>
-            <p>But Hebrews 11 is about more than just our personal needs. It is about God wanting to fulfill His plan and purpose on this earth.</p>
-
-            <h3>Faith for God's Purpose</h3>
-            <p>Let's look at the examples in Hebrews 11.</p>
-            <p><strong>Abel</strong> did not use faith for his own cause, but for the worship of God. He knew: God wants a lamb from me. He offered this sacrifice to God and was even persecuted and killed for it.</p>
-            <p><strong>Enoch</strong> walked with God. He did God's will and experienced faith in doing so.</p>
-            <p><strong>Noah</strong> received instructions from God to build an ark. He did not yet see what was coming, but he believed God and built the ark. That was for God's plan and purpose.</p>
-            <p>Very often we use faith for our personal needs, but very little for God's needs. We believe: "Lord, help me to do well." But what about God's purpose? What does God want to do today?</p>
-
-            <div class="verse-box">
-                <div class="verse-ref">Hebrews 11:24-26</div>
-                <p class="verse-text">"²⁴ By faith Moses, when he became great, refused to be called the son of Pharaoh’s daughter, ²⁵ choosing rather to be mistreated with the people of God than to enjoy the passing pleasures of sin, ²⁶ esteeming the reproach of Christ greater riches than the treasures of Egypt; for he looked away to the reward."</p>
-            </div>
-
-            <h3>What Has First Priority?</h3>
-            <p>This becomes especially clear with Moses. From a human perspective, Moses had the best conditions for a career. He grew up in Pharaoh's house and had an excellent education. Perhaps he could have even become Pharaoh.</p>
-            <p>Yet Moses did not use his faith to achieve his next career step. He preferred to be mistreated with the people of God because God had called him to a service. What has first priority in our hearts? Our career? Our education? We are here for God's kingdom. For that, we need faith.</p>
-
-            <h3>Living Faith Instead of Religion</h3>
-            <p>How did Abel, Noah, and the others even know what God wanted? It sprang from their fellowship with the Lord. This reveals the secret: faith is a living relationship with the living God.</p>
-            <p>To believe means not only to <strong>believe in God</strong>, but also to <strong>believe God</strong>—to believe His sayings, to believe His plan, and to act accordingly. And that includes being willing to give our self into death.</p>
-            <p>Therefore let us pray: <em>Lord, what do You want to do today? What do You want to have from me? And how can I cooperate with You through faith so that Your purpose goes forward?</em></p>
-
-            <p class="article-source">
-                Source: <a href="https://bibeltreff.info/artikel/hebraer-brief/hebraer-11-glaube-fuer-gottes-vorsatz.html" target="_blank" rel="noopener">Bibeltreff Stuttgart</a> (translated from German).
-            </p>
-        </article>
-
-        <!-- All articles from https://thechurchintoronto.org/articles/ (each opens the original page) -->
-        <div class="more-articles" id="church-articles">
-            <h3>More articles from The Church in Toronto</h3>
-            <p class="section-intro" style="margin-bottom: 0;">Each title opens the full article on <a href="https://thechurchintoronto.org/articles/" target="_blank" rel="noopener" style="color: var(--nav-accent); font-weight: 600;">thechurchintoronto.org</a>.</p>
-
-            <input class="article-filter" id="article-filter" type="search" placeholder="Search articles" aria-label="Search articles">
-
-            <ul class="article-index" id="article-index">
-                <li><a href="https://thechurchintoronto.org/jesus-christ-is-god/" target="_blank" rel="noopener"><span>Jesus Christ is God</span><time datetime="2025-04-24">April 24, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-easter/" target="_blank" rel="noopener"><span>Should Christians Celebrate Easter?</span><time datetime="2025-04-19">April 19, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/will-you-be-here-when-the-earth-is-judged-by-god/" target="_blank" rel="noopener"><span>Will you be here when the earth is judged by God?</span><time datetime="2025-04-12">April 12, 2025</time></a></li>
-                <li><a href="https://thechurchintoronto.org/jesus-is-returning-soon-now-what/" target="_blank" rel="noopener"><span>Jesus is returning soon! Now what??</span><time datetime="2024-05-03">May 3, 2024</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-church-what-it-is-and-what-is-it-not/" target="_blank" rel="noopener"><span>The Church: What it is and what is it not.</span><time datetime="2022-11-22">November 22, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/salvation-more-than-you-realize/" target="_blank" rel="noopener"><span>Salvation: More Than You Realize!</span><time datetime="2022-08-01">August 1, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/gods-plan-his-kingdom-on-earth-represented-by-the-church/" target="_blank" rel="noopener"><span>God’s Plan – Establishing His Kingdom on Earth through the Church</span><time datetime="2022-04-30">April 30, 2022</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-covid-19-vaccines-and-the-antichrist/" target="_blank" rel="noopener"><span>The COVID-19 Vaccines and the Antichrist</span><time datetime="2021-10-05">October 5, 2021</time></a></li>
-                <li><a href="https://thechurchintoronto.org/are-christians-safe-from-gods-wrath/" target="_blank" rel="noopener"><span>Are Christians Safe from God’s Wrath?</span><time datetime="2021-06-11">June 11, 2021</time></a></li>
-                <li><a href="https://thechurchintoronto.org/is-the-old-testament-still-relevant/" target="_blank" rel="noopener"><span>Is the Old Testament Still Relevant?</span><time datetime="2020-12-12">December 12, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-honor-mary/" target="_blank" rel="noopener"><span>Should Christians Honor Mary?</span><time datetime="2020-08-20">August 20, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/israel-signs-peace-deal-with-uae-why-this-matters/" target="_blank" rel="noopener"><span>Israel signs peace deal with UAE – Why this matters!</span><time datetime="2020-08-16">August 16, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/a-righteous-god-who-hates-lawlessness/" target="_blank" rel="noopener"><span>A Righteous God Who Hates Lawlessness</span><time datetime="2020-06-18">June 18, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/can-i-understand-the-bible/" target="_blank" rel="noopener"><span>Can I understand the Bible?</span><time datetime="2020-06-15">June 15, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/can-we-lose-our-salvation/" target="_blank" rel="noopener"><span>Can we lose our salvation?</span><time datetime="2020-04-19">April 19, 2020</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-christmas/" target="_blank" rel="noopener"><span>Should Christians Celebrate Christmas?</span><time datetime="2019-12-17">December 17, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/should-christians-celebrate-halloween/" target="_blank" rel="noopener"><span>Should Christians Celebrate Halloween?</span><time datetime="2019-10-30">October 30, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/the-meaning-and-spiritual-reality-of-baptism/" target="_blank" rel="noopener"><span>The Meaning and Spiritual Reality of Baptism</span><time datetime="2019-09-26">September 26, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/do-christians-really-go-to-heaven/" target="_blank" rel="noopener"><span>Do Christians really go to Heaven for Eternity?</span><time datetime="2019-06-18">June 18, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/enter-by-the-narrow-gate/" target="_blank" rel="noopener"><span>Enter by the narrow gate</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
-                <li><a href="https://thechurchintoronto.org/who-is-jesus-christ/" target="_blank" rel="noopener"><span>Who is Jesus Christ?</span><time datetime="2019-06-16">June 16, 2019</time></a></li>
-            </ul>
-            <p class="article-empty" id="article-empty" hidden>No articles match your search.</p>
-        </div>
+        <a class="all-articles-link" href="articles.html">See all articles</a>
     </section>
 
     <!-- ================= MEETING SCHEDULE ================= -->
@@ -679,28 +590,12 @@
             try { localStorage.setItem("theme", next); } catch (e) {}
         });
 
-        // Search box for the article list
-        (function () {
-            const box = document.getElementById("article-filter");
-            const items = document.querySelectorAll("#article-index li");
-            const empty = document.getElementById("article-empty");
-            box.addEventListener("input", () => {
-                const q = box.value.trim().toLowerCase();
-                let shown = 0;
-                items.forEach(li => {
-                    const match = li.textContent.toLowerCase().includes(q);
-                    li.hidden = !match;
-                    if (match) shown++;
-                });
-                empty.hidden = shown > 0;
-            });
-        })();
-
         // Highlight the top-menu link for the section you are viewing
         (function () {
             const links = document.querySelectorAll(".site-nav a");
             const map = {};
             links.forEach(a => {
+                if (!a.getAttribute("href").startsWith("#")) return;   // skip links to other pages
                 const el = document.querySelector(a.getAttribute("href"));
                 if (el) map[el.id] = a;
             });
